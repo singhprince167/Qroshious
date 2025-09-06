@@ -3,15 +3,13 @@
 import { useEffect, useRef } from "react";
 
 type ReporterProps = {
-  /*  ⎯⎯ props are only provided on the global-error page ⎯⎯ */
   error?: Error & { digest?: string };
   reset?: () => void;
 };
 
 export default function ErrorReporter({ error, reset }: ReporterProps) {
-  /* ─ instrumentation shared by every route ─ */
   const lastOverlayMsg = useRef("");
-  const pollRef = useRef<NodeJS.Timeout>();
+  const pollRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const inIframe = window.parent !== window;
@@ -68,11 +66,10 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
     return () => {
       window.removeEventListener("error", onError);
       window.removeEventListener("unhandledrejection", onReject);
-      pollRef.current && clearInterval(pollRef.current);
+      if (pollRef.current) clearInterval(pollRef.current);
     };
   }, []);
 
-  /* ─ extra postMessage when on the global-error route ─ */
   useEffect(() => {
     if (!error) return;
     window.parent.postMessage(
@@ -91,10 +88,8 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
     );
   }, [error]);
 
-  /* ─ ordinary pages render nothing ─ */
   if (!error) return null;
 
-  /* ─ global-error UI ─ */
   return (
     <html>
       <body className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
