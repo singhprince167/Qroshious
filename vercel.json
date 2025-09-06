@@ -4,7 +4,9 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next"
+      "use": "@vercel/next",
+      "rootDirectory": "src"
+
     }
   ],
   "routes": []
