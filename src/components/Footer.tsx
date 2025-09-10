@@ -60,32 +60,32 @@ export default function Footer() {
           {/* Middle: Utility links */}
           <div className="lg:col-span-1">
             <nav className="grid grid-cols-2 gap-x-8 gap-y-3" aria-label="Footer navigation">
-              <a 
+              {/* <a 
                 href="/brands/macronica" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Macronica
-              </a>
-              <a 
+              </a> */}
+              {/* <a 
                 href="/brands/orchids" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Orchids
-              </a>
+              </a> */}
               <a 
-                href="/story" 
+                href="#story" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Story
               </a>
               <a 
-                href="/products" 
+                href="#products" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Products
               </a>
               <a 
-                href="/sustainability" 
+                href="#sustainability" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Sustainability
@@ -97,12 +97,12 @@ export default function Footer() {
               >
                 Accessibility
               </a>
-              <a 
+              {/* <a 
                 href="/privacy" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Privacy
-              </a>
+              </a> */}
             </nav>
           </div>
 
@@ -111,7 +111,7 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex items-center space-x-4">
               <a
-                href="https://linkedin.com/company/qroshious"
+                href="https://www.linkedin.com/company/sahind-technologies/?originalSubdomain=in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -168,7 +168,7 @@ export default function Footer() {
             {/* Additional links */}
             <div className="flex items-center space-x-6">
               <a 
-                href="/sitemap" 
+                href="https://www.google.com/maps/place/Sahind+Technologies+%7C+IT+%26+Software+Development+Company+in+Lucknow/@26.8809557,80.979882,686m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8a61417332bc6a8b:0xe0dd484e6e2f936a!8m2!3d26.8809509!4d80.9824569!16s%2Fg%2F11x7n1z6g5?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-sm"
               >
                 Sitemap
@@ -188,7 +188,7 @@ export default function Footer() {
 
               {/* Contact info */}
               <span className="text-sm text-muted-foreground">
-                Questions? <a href="mailto:hello@qroshious.example" className="hover:text-foreground transition-colors">hello@qroshious.example</a>
+                Questions? <a href="info@sahindtech.com" className="hover:text-foreground transition-colors">info@sahindtech.com</a> <br />
               </span>
             </div>
           </div>

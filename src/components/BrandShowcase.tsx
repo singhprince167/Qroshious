@@ -25,31 +25,31 @@ const subBrands: Brand[] = [
     descriptor: "Playful flavors and timeless mac & cheese recipes that bring families together around the table, creating lasting memories one bite at a time.",
     ctaText: "Find family favorites",
     accentColor: "#f59e0b",
-    heroImage: "https://images.unsplash.com/photo-1609501676725-7186f734b23b?w=800&h=600&fit=crop&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     heroImageAlt: "Happy children laughing and enjoying colorful macaroni and cheese together at a family dinner table",
     productHighlights: [
       "Kid-approved recipes that parents love too",
-      "Quick 15-minute prep for busy families", 
+      "Quick 15-minute prep for busy families",
       "Fun shapes and colors that make eating exciting"
     ],
     extendedDescription: "From classic mac & cheese to creative twists with hidden vegetables and protein additions, Macronica brings joy to family mealtimes with recipes that everyone loves. Our playful approach to comfort food means no more dinner battles – just smiles around the table."
   },
-  {
-    id: "orchids",
-    name: "Orchids",
-    tagline: "Refined. Elegant. Gourmet.",
-    descriptor: "Premium ingredients and chef-inspired recipes for sophisticated palates seeking restaurant-quality experiences at home.",
-    ctaText: "Discover gourmet dishes",
-    accentColor: "#8b5cf6",
-    heroImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop&auto=format",
-    heroImageAlt: "Elegant fine dining table setting with beautifully plated gourmet pasta garnished with microgreens and truffle oil",
-    productHighlights: [
-      "Restaurant-quality plating techniques and presentation",
-      "Carefully curated premium ingredients and flavor profiles",
-      "Sustainable sourcing from artisanal producers"
-    ],
-    extendedDescription: "Elevate your dining experience with Orchids' collection of sophisticated recipes, featuring premium ingredients and restaurant-quality presentation for memorable occasions. Each dish is crafted to transform your home into an intimate fine dining destination."
-  }
+  // {
+  //   id: "orchids",
+  //   name: "Orchids",
+  //   tagline: "Refined. Elegant. Gourmet.",
+  //   descriptor: "Premium ingredients and chef-inspired recipes for sophisticated palates seeking restaurant-quality experiences at home.",
+  //   ctaText: "Discover gourmet dishes",
+  //   accentColor: "#8b5cf6",
+  //   heroImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop&auto=format",
+  //   heroImageAlt: "Elegant fine dining table setting with beautifully plated gourmet pasta garnished with microgreens and truffle oil",
+  //   productHighlights: [
+  //     "Restaurant-quality plating techniques and presentation",
+  //     "Carefully curated premium ingredients and flavor profiles",
+  //     "Sustainable sourcing from artisanal producers"
+  //   ],
+  //   extendedDescription: "Elevate your dining experience with Orchids' collection of sophisticated recipes, featuring premium ingredients and restaurant-quality presentation for memorable occasions. Each dish is crafted to transform your home into an intimate fine dining destination."
+  // }
 ];
 
 export default function BrandShowcase() {
@@ -57,7 +57,7 @@ export default function BrandShowcase() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
@@ -71,7 +71,7 @@ export default function BrandShowcase() {
   const closeBrandModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedBrand(null);
-    
+
     // Return focus to the trigger element
     if (triggerRef.current) {
       triggerRef.current.focus();
@@ -162,7 +162,7 @@ export default function BrandShowcase() {
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!contactForm.name || !contactForm.email || !contactForm.message) {
       toast.error("Please fill in all fields");
       return;
@@ -212,9 +212,9 @@ export default function BrandShowcase() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="h-px bg-border my-4 sm:my-6"></div>
-              
+
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-lg">
                 Creating memorable dining experiences through thoughtfully crafted recipes that bring people together around the table. From comfort classics to gourmet elegance, each brand tells its own story.
               </p>
@@ -312,7 +312,7 @@ export default function BrandShowcase() {
                   onClick={(e) => handleCardClick(brand, e)}
                   onKeyDown={(e) => handleCardKeyDown(brand, e)}
                   aria-describedby={`${brand.id}-descriptor`}
-                  style={{ 
+                  style={{
                     borderColor: `${brand.accentColor}40`,
                     boxShadow: `0 0 0 0 ${brand.accentColor}20`
                   }}
@@ -322,10 +322,10 @@ export default function BrandShowcase() {
                     className="absolute top-0 left-0 w-full h-2 rounded-t-2xl"
                     style={{ backgroundColor: brand.accentColor }}
                   />
-                  
+
                   {/* Brand Icon */}
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <div 
+                    <div
                       className="w-12 sm:w-16 h-12 sm:h-16 rounded-2xl flex items-center justify-center text-white font-display font-bold text-lg sm:text-xl shadow-lg"
                       style={{ backgroundColor: brand.accentColor }}
                     >
@@ -357,7 +357,7 @@ export default function BrandShowcase() {
 
                     <div className="flex items-center justify-between pt-3 sm:pt-4">
                       <div className="flex items-center space-x-2">
-                        <div 
+                        <div
                           className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: brand.accentColor }}
                         />
@@ -404,12 +404,12 @@ export default function BrandShowcase() {
                   Made with Love, Served with Smiles.
                 </p>
               </div>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   Qroshious began with a simple belief: that great food has the power to bring people together. Founded on the principles of quality, creativity, and genuine care, we've grown from a single vision into a family of distinctive brands.
                 </p>
-                
+
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   Each recipe we create, each product we develop, carries with it our commitment to making mealtime moments more meaningful. Whether it's the playful comfort of Macronica or the refined elegance of Orchids, every brand reflects our core values.
                 </p>
@@ -444,7 +444,7 @@ export default function BrandShowcase() {
             <div className="relative mt-8 lg:mt-0">
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-l from-accent/30 to-primary/10 rounded-2xl blur-2xl opacity-40"></div>
               <img
-                src="https://images.unsplash.com/photo-1543353071-10c8c57e4951?w=800&h=600&fit=crop&auto=format"
+                src="https://images.unsplash.com/photo-1663841365335-8acab127bf68?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Dedicated chef carefully preparing fresh ingredients with passion and attention to detail, embodying Qroshious' commitment to quality and craftsmanship in every recipe"
                 className="relative w-full h-56 sm:h-72 lg:h-96 object-cover rounded-2xl shadow-2xl"
                 loading="lazy"
@@ -475,7 +475,7 @@ export default function BrandShowcase() {
             {/* Macronica Products */}
             <div className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-amber-200">
               <img
-                src="https://images.unsplash.com/photo-1551892374-ecf8fa57a5b5?w=400&h=250&fit=crop&auto=format"
+                src="https://cdn.bostonchefs.com/bostonchefs/wp-content/uploads/2018/01/andy-husbands-classic-mac-and-cheese-e1515187781173.jpg"
                 alt="Golden, bubbly classic mac and cheese with crispy breadcrumb topping, served in a colorful bowl that appeals to children and families"
                 className="w-full h-48 sm:h-52 object-cover"
                 loading="lazy"
@@ -496,7 +496,7 @@ export default function BrandShowcase() {
 
             <div className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-amber-200">
               <img
-                src="https://images.unsplash.com/photo-1621996346565-e3dbc794d53a?w=400&h=250&fit=crop&auto=format"
+                src="https://www.tastingtothrive.com/wp-content/uploads/2021/02/healthy-Vegan-Rainbow-Veggie-Pasta-Recipe.png"
                 alt="Vibrant rainbow-colored pasta salad with fresh vegetables, making healthy eating fun and appealing for children"
                 className="w-full h-48 sm:h-52 object-cover"
                 loading="lazy"
@@ -514,8 +514,31 @@ export default function BrandShowcase() {
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Fun, colorful pasta dishes that make eating vegetables exciting and enjoyable for kids.</p>
               </div>
             </div>
+            {/* Card 2: Fresh Fruit Salad */}
+            <div className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-amber-200">
+              <img
+                src="https://images.unsplash.com/photo-1619805221645-70a477c0c9a8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Fresh and colorful fruit salad in a bowl, highlighting healthy snacking for kids"
+                className="w-full h-48 sm:h-52 object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-4 sm:w-5 h-4 sm:h-5 rounded-full bg-amber-500"></div>
+                    <span className="text-xs sm:text-sm font-semibold text-amber-600">Macronica</span>
+                  </div>
+                  <span className="text-xs text-muted-foreground">Healthy Choice</span>
+                </div>
+                <h3 className="font-display font-bold text-lg sm:text-xl text-foreground">Fresh Fruit Salad</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  A refreshing mix of seasonal fruits that makes healthy eating tasty and fun for kids.
+                </p>
+              </div>
+            </div>
 
-            {/* Orchids Products */}
+            {/* Orchids Products
             <div className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-violet-200">
               <img
                 src="https://images.unsplash.com/photo-1572441713132-51c75654db73?w=400&h=250&fit=crop&auto=format"
@@ -556,9 +579,9 @@ export default function BrandShowcase() {
                 <h3 className="font-display font-bold text-lg sm:text-xl text-foreground">Seafood Linguine</h3>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Sophisticated flavors and restaurant-quality presentation for special occasions.</p>
               </div>
-            </div>
+            </div> */}
 
-            {/* Feature Product */}
+            {/* Feature Product
             <div className="sm:col-span-2 lg:col-span-1 bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border">
               <img
                 src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=250&fit=crop&auto=format"
@@ -575,7 +598,7 @@ export default function BrandShowcase() {
                 <h3 className="font-display font-semibold text-lg sm:text-xl text-foreground">Artisan Recipe Kits</h3>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Complete meal kits that bring the joy of cooking and sharing to your kitchen.</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="text-center mt-12 sm:mt-16">
@@ -605,7 +628,7 @@ export default function BrandShowcase() {
                   Sustainable practices for a better future.
                 </p>
               </div>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   At Qroshious, we believe that caring for people extends to caring for our planet. Our commitment to sustainability runs through every aspect of our business, from ingredient sourcing to packaging choices.
@@ -623,7 +646,7 @@ export default function BrandShowcase() {
                     <div className="text-sm sm:text-base text-muted-foreground">We partner with suppliers who share our values of quality, ethics, and environmental stewardship.</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 sm:w-14 h-12 sm:h-14 bg-success-soft rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Award className="w-6 sm:w-7 h-6 sm:h-7 text-success" />
@@ -633,7 +656,7 @@ export default function BrandShowcase() {
                     <div className="text-sm sm:text-base text-muted-foreground">Our packaging is designed to minimize waste while maintaining product quality and freshness.</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 sm:w-14 h-12 sm:h-14 bg-success-soft rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Users className="w-6 sm:w-7 h-6 sm:h-7 text-success" />
@@ -676,7 +699,7 @@ export default function BrandShowcase() {
                   We'd love to hear from you.
                 </p>
               </div>
-              
+
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Whether you have questions about our products, want to learn more about our brands, or are interested in partnerships, we're here to help.
               </p>
@@ -689,7 +712,7 @@ export default function BrandShowcase() {
                   <div>
                     <div className="font-medium">Email</div>
                     <a href="mailto:hello@qroshious.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      hello@qroshious.com
+                      info@sahindtech.com
                     </a>
                   </div>
                 </div>
@@ -701,7 +724,7 @@ export default function BrandShowcase() {
                   <div>
                     <div className="font-medium">Phone</div>
                     <a href="tel:+1-555-0123" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      +1 (555) 012-3456
+                      +91 97929 49822
                     </a>
                   </div>
                 </div>
@@ -713,8 +736,8 @@ export default function BrandShowcase() {
                   <div>
                     <div className="font-medium">Address</div>
                     <div className="text-sm text-muted-foreground">
-                      123 Culinary Way<br />
-                      Food City, FC 12345
+                      B-2013, Indira Nagar <br></br>
+                       Rd, opposite of PNB, B Block, Indira Nagar, Lucknow, Uttar Pradesh 226016
                     </div>
                   </div>
                 </div>
