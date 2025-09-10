@@ -48,7 +48,6 @@ export default function HeaderNav() {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#brands", label: "Brands" },
     { href: "#story", label: "Story" },
     { href: "#products", label: "Products" },
     { href: "#sustainability", label: "Sustainability" },
