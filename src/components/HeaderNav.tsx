@@ -99,14 +99,14 @@ export default function HeaderNav() {
             <div className="hidden lg:block relative" ref={brandSwitcherRef}>
               <button
                 onClick={() => setIsBrandSwitcherOpen(!isBrandSwitcherOpen)}
-                className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-accent-foreground hover:bg-accent rounded-3xl transition-colors"
               >
                 Brands
                 <ChevronUp className={`w-4 h-4 transition-transform ${isBrandSwitcherOpen ? "rotate-180" : ""}`} />
               </button>
 
               {isBrandSwitcherOpen && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg p-2 z-50">
+                <div className="absolute right-0 top-full mt-2 w-48 bg-gray-50 border border-b-accent-foreground rounded-3xl shadow-lg p-2 z-50">
                   {brands.map((brand) => (
                     <a
                       key={brand.id}
